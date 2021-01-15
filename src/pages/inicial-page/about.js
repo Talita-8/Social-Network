@@ -25,10 +25,3 @@ Há potência em mulheres construtoras de igualdade.
 
 return rootElement;
 };
-
-export const About = () => {
-  document.getElementById('about').addEventListener('click',(e) => {
-  e.preventDefault();
-  document.getElementById('text-about').style.display = 'block';
-})
-}

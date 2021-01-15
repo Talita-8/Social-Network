@@ -10,26 +10,27 @@ import { onNavigate } from '../utils/history.js';
     appId: "1:693936274709:web:840380126cb7b04fcf7d1c"
   };
   // Initialize Firebase
+ 
   firebase.initializeApp(firebaseConfig);
   const dataBase = firebase.firestore()
 
 // FUNÇÃO FIREBASE -> CADASTRO
 
-export const subscribe = (email, password, name) => {
-  let userLog = firebase.auth().currentUser
+    export const subscribe = (email, password, name) => {
+      let userLog = firebase.auth().currentUser
 
-  firebase.auth().createUserWithEmailAndPassword(email, password).then((user) => {
-   console.log('usuário', user);
-  }).catch((error) => {
-    let errorCode = error.code;
-    let errorMessage = error.message;
-    return {errorCode, errorMessage}
-  })
-  if(userLog != null){
-    userLog.updateProfile({displayName: name})
-    console.log('Nome: ', user.displayName)
-  }
-}
+      firebase.auth().createUserWithEmailAndPassword(email, password).then((user) => {
+      console.log('usuário', user);
+      }).catch((error) => {
+        let errorCode = error.code;
+        let errorMessage = error.message;
+        return {errorCode, errorMessage}
+      })
+      if(userLog != null){
+        userLog.updateProfile({displayName: name})
+        console.log('Nome: ', user.displayName)
+      }
+    }
 
 export function errorRegister(){
   
@@ -66,49 +67,52 @@ export function errorRegister(){
 
 // FUNÇÕES FIREBASE -> LOGIN
 
-export const emailLogin = (email,password) => {
 
-  firebase.auth().signInWithEmailAndPassword(email, password).then(() =>{
-    console.log('Usuario logado');
-  }).catch(error => {
-    console.log ('error', error);
-  })
-}
+    export const emailLogin = (email,password) => {
 
-export const googleLogin = () => {
-  let provider = new firebase.auth.GoogleAuthProvider();
+      firebase.auth().signInWithEmailAndPassword(email, password).then(() =>{
+        console.log('Usuario logado');
+      }).catch(error => {
+        console.log ('error', error);
+      })
+    }
 
-  firebase.auth().signInWithPopup(provider).then(result => {
-    let token = result.credential.accessToken;
-    let user = result.user;
+    export const googleLogin = () => {
+      let provider = new firebase.auth.GoogleAuthProvider();
 
-    console.log('usuário', user)
-    console.log('token', token);
-  }).catch (error => {
-    let errorCode = error.code;
-    let errorMessage = error.message;
-    let email = error.email;
-    let credential = error.credential;
-    console.log('erro', errorCode, errorMessage, email, credential);
-  }) 
-}
+      firebase.auth().signInWithPopup(provider).then(result => {
+        let token = result.credential.accessToken;
+        let user = result.user;
+
+        console.log('usuário', user)
+        console.log('token', token);
+      }).catch (error => {
+        let errorCode = error.code;
+        let errorMessage = error.message;
+        let email = error.email;
+        let credential = error.credential;
+
+        console.log('erro', errorCode, errorMessage, email, credential);
+      }) 
+    }
+
 // FUNÇÃO DE CONFIRMAÇÃO : USUÁRIO LOGADO
 
-export const userOn = () => {
-firebase.auth().onAuthStateChanged(function(user) {
-    if (user) { 
-      document.getElementById('main-page').style.display = "none";
-      document.getElementById('root').style.width = "100%";
-      onNavigate('/feed');
-      Post();
-      logOut();     
-  } 
-  else {
-    document.getElementById('main-page').style.display = "block";
-    onNavigate('/');
-  }
- }) 
-}
+    export const userOn = () => {
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) { 
+          document.getElementById('main-page').style.display = "none";
+          document.getElementById('root').style.width = "100%";
+          onNavigate('/feed');
+          Post();
+          logOut();     
+      } 
+      else {
+        document.getElementById('main-page').style.display = "block";
+        onNavigate('/');
+      }
+    }) 
+    }
 // FUNÇÕES FIREBASE -> FEED
 
 
@@ -121,7 +125,7 @@ export const Post = () => {
         
         dataBase.collection('Posts').add({
         post_text: postText,
-        date: new Date(),
+        date: new Date().toLocaleString('pt-BR'),
         id_user: userId,
         username: firebase.auth().currentUser.displayName,
         likes: [],
@@ -188,4 +192,46 @@ export const Post = () => {
        }  
       }
 
+
+      export const DeletePost = (id) => {
+        dataBase.collection('Posts').doc(id).delete().then(() => {
+            console.log('Postagem Deletada');
+            onNavigate('/feed');
+          })
+          .catch((error) => {
+            console.error('Erro ao excluir o post: ', error);
+          });
+        }
+
+
+      export function errorRegister(){
+  
+        let email = document.getElementById('new-email').value;
+        let password = document.getElementById('password-register').value;
+        let userName = document.getElementById('name').value;
+     
+       if(userName =="" || userName.lengtht < 5)
+       {
+         alert( "Preencha seu NOME corretamente!" );
+         userName.focus();
+         return false;
+       }
+       
+       
+       if( email =="" || email.indexOf('@')==-1 || email.indexOf('.')==-1 )
+       {
+         alert( "Preencha seu E-MAIL corretamente!" );
+         email.focus();
+         return false;
+       }
+       
+       if(password =="" || password == "")
+       {
+         alert( "Preencha seu NOME corretamente!" );
+         password.focus();
+       return false;
+       }
+       
+       return true;
+     }
     

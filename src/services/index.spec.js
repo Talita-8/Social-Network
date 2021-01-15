@@ -10,3 +10,4 @@ describe('emailLogin', () => {
     expect(typeof emailLogin).toBe('function');
   });
 });
+
