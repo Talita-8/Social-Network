@@ -32,7 +32,41 @@ import { onNavigate } from '../utils/history.js';
       }
     }
 
+export function errorRegister(){
+  
+  let email = document.getElementById('new-email').value;
+  let password = document.getElementById('password-register').value;
+  let userName = document.getElementById('name').value;
+
+ if(userName =="" || userName.lengtht < 5)
+ {
+   alert( "Preencha seu NOME corretamente!" );
+   userName.focus();
+   return false;
+ }
+ 
+ 
+ if( email =="" || email.indexOf('@')==-1 || email.indexOf('.')==-1 )
+ {
+   alert( "Preencha seu E-MAIL corretamente!" );
+   email.focus();
+   return false;
+ }
+ 
+ if(password =="" || password == "")
+ {
+   alert( "Preencha seu NOME corretamente!" );
+   password.focus();
+ return false;
+ }
+ 
+ alert( "Cadastro realizado com sucesso" );
+ return true;
+}
+
+
 // FUNÇÕES FIREBASE -> LOGIN
+
 
     export const emailLogin = (email,password) => {
 
@@ -61,6 +95,7 @@ import { onNavigate } from '../utils/history.js';
         console.log('erro', errorCode, errorMessage, email, credential);
       }) 
     }
+
 // FUNÇÃO DE CONFIRMAÇÃO : USUÁRIO LOGADO
 
     export const userOn = () => {

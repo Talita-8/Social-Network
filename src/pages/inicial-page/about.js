@@ -7,26 +7,19 @@ export const Home = () => {
       <div id='logo-name' class='network-name'>
         <h1 class='tpm-name'>TPM</h1>
       
-        <p id='subtitle-one'>Tudo é possível para Maes</p>
+        <p id='subtitle-one'>Tudo é possível para Mulheres que compartilham ideais!</p>
                                               <br>
           <img class="mae-carol" src="./img/mcarol.jpg" alt="Desenho de Mae Carol Jemison astronauta">      
 
+          <div id= "text-about class= "">
+          <span onclick="document.getElementById('text-about').style.display='aboutmode'" class=""></span>
             <button id='about'>SOBRE</button>
-            <p id='about-text'> Mae Carol Jemison é uma médica, engenheira e ex-astronauta 
-            estadunidense. 
-            Foi a primeira mulher negra a ir para o espaço, quando serviu como especialista 
-            de missão a bordo do ônibus espacial Endeavour. Jemison se uniu ao grupo de astronautas 
-            da NASA de 1987 e serviu na missão STS-47, na qual orbitou a Terra dos dias 12 a 20 de 
-            setembro de 1992. <br><br>
-
-            Mae foi tudo o que ela desejou ser, e você? O que deseja? 
-            Então você vai conseguir!  <br>
-            Essa é uma rede destinada a você mulher que pretende confiar mais
-              em si mesma para ingressar na área que você sempre sonhou!
-            Aqui você pode compartilhar ideias, oportunidades, cursos e qualquer
-            outra contribuição para várias outras mulheres, formando uma rede de apoio
-              em um lugar seguro.
+            <p id='about-text'> Além da Sobrevivência - Um Espaço Seguro para Mulheres
+            “Sororidade é a ideia de solidariedade entre mulheres, que se apoiam para conquistar a liberdade e a igualdade que desejam. É respeitar, ouvir e dar voz umas às outras sem julgamentos” – Escola Educação
+Esse espaço é destinado às mulheres que procuram um espaço seguro para compartilhar planos, sonhos, desafios, oportunidades e encontrar apoio e fortalecimento.
+Há potência em mulheres construtoras de igualdade.
             </p>
+          </div>
         </div> 
       `
 
