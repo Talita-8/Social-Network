@@ -76,6 +76,8 @@ document.getElementById('main-page').innerHTML = `
 
   document.getElementById('login-btn').addEventListener("click", (e) => {
     e.preventDefault();
+
+
       modal.style.display= 'block';
       modal.style.width = 'auto';
 
@@ -86,6 +88,7 @@ document.getElementById('main-page').innerHTML = `
     emailLogin(email, password);
     })
   })
+
 
   document.getElementById('google-login').addEventListener('click', (e) =>{
     e.preventDefault();

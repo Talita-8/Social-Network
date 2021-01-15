@@ -157,6 +157,7 @@ export const Post = () => {
        }  
       }
 
+
       export const DeletePost = (id) => {
         dataBase.collection('Posts').doc(id).delete().then(() => {
             console.log('Postagem Deletada');
@@ -166,6 +167,7 @@ export const Post = () => {
             console.error('Erro ao excluir o post: ', error);
           });
         }
+
 
       export function errorRegister(){
   
