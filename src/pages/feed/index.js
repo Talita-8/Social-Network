@@ -18,7 +18,7 @@ export const Feed = () => {
   </div>
     <div id="profile">
       <figure class='figure-profile'>
-        <img class="picture-profile" src="./pages/feed/img/profile/profile-exemple.jpg" alt="foto do perfil"> 
+        <img class="picture-profile" src="./pages/feed/img/profile/perfil.jpeg" alt="foto do perfil"> 
         <p id="name-profile">Keiti Peurri</p>
       </figure>
       
