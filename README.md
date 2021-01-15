@@ -1,6 +1,6 @@
 Projeto TPM - Tudo é possível para Mulheres que compartilham ideais!
 
-[Link da aplicação](https://social-network-lab-pnd.web.app/)
+[Link do Projeto](https://social-network-lab-pnd.web.app/)
 
 ## Índice
 
@@ -75,14 +75,13 @@ Há potência em mulheres construtoras de igualdade.
 
 O protótipo é de baixa fidelidade sofreu algumas alterações conforme os testes com as usuárias e dos conhecimentos técnicos adquiridos pela equipe.
 
-[Protótipo da aplicação](src/img/protreadme.jpg)
+![Protótipo da aplicação](src/img/protreadme.jpg)
 
 ###  Equipe Laboratoria
-| Nome | Github | Curso |
-| -------- | -------- | -------- | -------- | -------- |
-| Lucila Xavier | Github.com/Lucilaxavier | Bootcamp Laboratória |
-| Mairã Soares | Github.com/MairaSoares | Bootcamp Laboratória |
-| Talita | Github.com/Talita-8 | Bootcamp Laboratória |
+
+| Lucila Xavier | https://github.com/Lucilaxavier | 
+| Mairã Soares | https://github.com/MairaSoares |
+| Talita | https://github.com/Talita-8 |
 
 ###  Agradecimentos:
 Nossa gratidão a toda equipe técnica da Laboratoria pelo suporte diário, somos mais fortes e mais coletivas diante de todo aprendizado que estamos tendo nesse bootcamp.
