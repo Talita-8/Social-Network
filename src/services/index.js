@@ -87,12 +87,14 @@ export const Post = () => {
      e.preventDefault();
      let userId = firebase.auth().currentUser.uid
      let postText = document.getElementById('write-post').value
+     let commentText = document.getElementById('comment-area').value
         
         dataBase.collection('Posts').add({
         post_text: postText,
-        date: new Date().toLocaleString('pt-BR'),
+        date: new Date(),
         id_user: userId,
         username: firebase.auth().currentUser.displayName,
+        comments: [(commentText)],
         likes: [],
         loveIt: []
       })
@@ -111,7 +113,7 @@ export const Post = () => {
     const post = dataBase.collection('Posts').orderBy("date", "desc")
     return post.get()
     };
-  
+     
   export const Like = (id) => {
     let userId = firebase.auth().currentUser.uid
     dataBase.collection('Posts').doc(`${id}`).update({
