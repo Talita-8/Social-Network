@@ -28,6 +28,7 @@ export const Feed = () => {
       </form>
     </div>
     <div id='posts'></div>
+    <div id='comments'></div>
     `;
    
   const loadPost = (post) => {
@@ -46,7 +47,7 @@ export const Feed = () => {
        </ul> 
         </section>
      `
-    )  }
+    ) }
 
     getPosts().then(querySnapshot => {
       querySnapshot.forEach((post) => {

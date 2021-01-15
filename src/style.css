@@ -417,6 +417,10 @@ span.psw {
     font-weight: bolder;
     color: crimson;
 }
+.comment {
+    font-weight: bolder;
+    color: crimson;
+}
 
 @media only screen and (max-device-width: 500px){
 
