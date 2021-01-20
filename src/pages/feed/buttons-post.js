@@ -18,7 +18,7 @@ export const reactPost = async() => {
              console.log('Você descurtiu isso');  
             }
            });
-         })
+         });
     
     
        const allLove = document.querySelectorAll('.love');

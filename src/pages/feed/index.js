@@ -24,7 +24,7 @@ export const Feed = () => {
       
       <form class="post-area">
         <input id="write-post" class="write-post" type="text" placeholder="Poste uma ideia, uma dica ou uma oportunidade para mulheres. Aqui é um espaço seguro!">
-        <input type="submit" id='post-it' class="button-feed" value="Postar">
+        <button id='post-it' class="button-feed">Postar</button>
       </form>
     </div>
     <div id='posts'></div>
