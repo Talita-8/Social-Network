@@ -381,7 +381,7 @@ img.icone {
     color: black;
 
     font-size: 29px;
-    background-color: rgb(252, 251, 247);
+    background-color: rgb(231, 229, 229);
     border-radius: 10px;
 }
 .liked {
@@ -395,38 +395,4 @@ img.icone {
 .comment {
     font-weight: bolder;
     color: crimson;
-}
-
-@media only screen and (max-device-width: 500px){
-
-    body {
-       display: block;
-       width: 500px;
-    }
-    .header-page {
-        display: block;
-        width: 100%;
-    }
- 
-    #root {
-        display: block;
-        width: 100%; 
-        margin-right: 0;
-    }
-    .main-page {
-        width: 100%;
-    }
-   /* Feed */
-
-   .profile {
-    width: 100%;
-   }
-   
-   .nav-bar ul {
-    display: flex;
-    justify-content: space-evenly;
-
-    padding: 0;
-    list-style: none;
-}
 }

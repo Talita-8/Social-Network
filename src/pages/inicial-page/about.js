@@ -1,4 +1,3 @@
-import { showAbout } from './login-functions.js'
 
 export const Home = () => {
     // Coloque sua página
@@ -24,7 +23,6 @@ export const Home = () => {
           </div>
         </div> 
       `
-    showAbout();
  return rootElement;
 };
 

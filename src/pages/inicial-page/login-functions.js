@@ -53,10 +53,6 @@ export const funcLogin = async() => {
       }
  };
 
- export const showAbout = async() => {
-   document.getElementById('about-link')
-    console.log('oiiii')
-  }
  
 
  

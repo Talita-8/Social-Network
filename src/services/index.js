@@ -132,13 +132,13 @@ export const Post = () => {
         loveIt: []
       })
       .then(function() {
+        document.getElementById('write-post').value = " ";
+        onNavigate('/feed');
         console.log("Post enviado com sucesso!");
-        onNavigate('/feed')
       })
       .catch(function() {
         console.error("Ocorreu um erro");
       });
-      document.getElementById('write-post').value = " "
     })
   } 
  
