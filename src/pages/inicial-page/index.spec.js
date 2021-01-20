@@ -30,3 +30,4 @@ describe('googleAccount', () => {
   it('should be a function', () => {
     expect(typeof googleAccount).toBe('function');
   });
+});
