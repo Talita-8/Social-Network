@@ -2,60 +2,43 @@ body {
     background-color:  rgb(253, 253, 253);
     display: flex;
     margin: 0 0 0 10px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
-h2{
-    margin: 20px 0 0 12px;
-    color: mediumturquoise;;
+.about-link {
+    color: rosybrown;
+    font-family: 'Lobster Two', cursive;
+    font-size: 25px;
+
+    transition: 1s;
+    cursor: pointer;
 }
 
-#main-page {
+.main-page {
     width: 50%;
     padding: 20px 0 0 20px;
 }
 
 .register {
-    margin-top: 15px;
+    margin: 15px 0 30px 0;
 }
 
-
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-  #login-btn {
-      width: 15%;
-      color: black;
-
-      padding: 9px;
-      background-color: rgb(255, 255, 255);
-      border: 1px solid;
-      border-width:medium;
-      border-color: rgb(16, 15, 65);
-      transition: 1s;
-    }
-  
-button {
-    background-color: #323142;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 50%;
-}
-  
 button:hover {
     opacity: 0.8;
 }
 
-#feedIn {
-    width: 100%;
+.feed-in {
+    width: 72%;
+    background-color: #323142; 
+    color: white;
+    font-weight: bolder;
+    font-size: 17px;
+
+    padding: 14px 20px; 
+    margin: 15px 0 0 0;
+    
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
 }
 /*Inicio css cadastro */
 * {
@@ -64,20 +47,15 @@ button:hover {
 }
 
 .subscribe-box {
+    width: 60%;
+    height: 300px;
     border: 1px solid lightgray;
     padding: 10px;
-    width: 70%;
     border-radius: 6px;
 }
 
 .subscribe-box fieldset{
     border: none;
-}
-
-body, input, select, textarea, button {
-    font-family: sans-serif;
-    font-size: 1em;
-    border-radius: 7px;
 }
 
 .group:before, .group:after {
@@ -89,89 +67,84 @@ body, input, select, textarea, button {
     clear: both;
 }
 
-.area {
-    margin-bottom: 1em;
-}
-
-.area label {
+.inputs-logins label {
     margin-bottom: 0.2em;
     color: #666;
     display: block;
 }
 
-fieldset.group .area {
+.inputs-logins {
+    width: 100%;
     float:  left;
     margin-right: 1em;
-}
-
-.area input[type="text"],
-.area input[type="email"],
-.area input[type="url"],
-.area input[type="tel"],
-.area select,
-.area textarea {
     padding: 0.2em;
-    border: 1px solid #CCC;
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
     display: block;
 }
 
-.area select option {
-    padding-right: 1em;
-}
-
-.area input:focus, .area select:focus, .area textarea:focus {
-    background: #FFC;
-}
-
-.area label.checkbox {
-    color: #000;
-    display: inline-block;
-    margin-right: 1em;
-}
-
-.botao {
-    font-size: 1.5em;
-    background: #F90;
-    border: 0;
-    margin-bottom: 1em;
-    color: #FFF;
-    padding: 0.2em 0.6em;
+.inputs-logins input {
+    width: 90%;
+    height: 30px;
+    border: 1px solid #CCC;
+    border-radius: 10px;
     box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+.inputs-logins input:focus {
+    border: 1.5px solid rgb(73, 167, 255);
 }
 
-.botao:hover {
-    background: #FB0;
-    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
-    text-shadow: none;
-}
+.subscribe-btn {
+    width: 50%; 
+    background-color: #323142; 
+    color: white;
+    font-weight: bolder;
+    font-size: 17px;
 
-.botao, select, label.checkbox {
+    padding: 14px 20px; 
+    margin: 15px 0 0 0;
+    
+    border-radius: 10px;
+    border: none;
     cursor: pointer;
 }
-#google-login {
+
+.google-login {
     background-color: white;
     color: black;
-
     padding: 9px;
-    border: 1px solid lightgrey;
-    border-width:medium;
-    border-color: rgb(43, 43, 48);
-    
+
+    margin-right: 1%;
+    border-radius: 10px;
+    border: 1.5px solid gray;
 }
+
+
+.login-btn {
+    width: 15%;
+    color: black;
+    padding: 9px;
+    background-color: rgb(255, 255, 255);
+   
+    border: 1.5px solid gray;
+    border-radius: 10px;
+  }
+
 .logo-google {
     padding-right: 5px;
 }
 /*Fim do css cadastro */
   
-.cancelbtn {
+.cancel-btn {
     width: auto;
     padding: 10px 18px;
+
+    color: white;
+    font-weight: bold;
+
     background-color: #f44336;
+    border-radius: 10px;
 }
   
-.imgcontainer {
+.img-container {
     text-align: center;
     margin: 24px 0 12px 0;
     position: relative;
@@ -183,38 +156,42 @@ img.icone {
 }
   
 .container {
+    width: 100%;
     padding: 16px;
 }
-  
-span.psw {
-    float: right;
-    padding-top: 16px;
+.container input {
+    display: block;
+    width: 70%;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    padding-left: 5px;
 }
-  
 .modal {
     display: none;
+    width: 100%;
+    height: 100%; 
+    
     position: fixed;
     z-index: 1;
     left: 0;
     top: 0;
-    width: 50%;
-    height: 100%; 
     overflow: auto; 
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
+    background: white;
     padding-top: 60px;
 }
 
 .inicial-page {
     justify-content: center;
-    align-items: center
+    align-items: center;
+    margin-top: 6%;
 }
 
-.modal-content {
-    background-color: #fefefe;
+.modal-box {
+    width: 80%;
+    background-color: #fefefe75;
     margin: 5% auto 15% auto;
-    border: 1px solid #888;
-
+    border: none;
 }
 
 .half-screen {
@@ -260,45 +237,37 @@ span.psw {
     to {transform: scale(1)}
   }
   
-  @media screen and (max-width: 300px) {
-    span.psw {
-       display: block;
-       float: none;
-    }
-    .cancelbtn {
-       width: 100%;
-    }
-  }
-
-.mae-carol {
-    border-radius: 10px;
-    width: 100%;
-}
 .tpm-name {
     font-family: 'Limelight', cursive;
     color: rgb(228, 234, 235);
-    font-size: 40px;
+    font-size: 60px;
 }
-#subtitle-one{
+.subtitle-one{
     font-family: monospace;
     font-size: 20px;
     color: cadetblue;
 }
 
 #about-text {
-    display: none;
-    font-size: 20px;
-    color: darkslategrey;
+    position: relative;
+    bottom: 300px;
+    border-radius: 10px;
+
+    font-family: monospace;
+    padding: 15px;
+    font-size: 15px;
+    color: transparent;
+    transition: 1s;
 }
-#about {
-    background-color: crimson;
+
+#about-text:hover {
+    color: rgb(66, 66, 66);
+    background-color: rgba(255, 255, 255, 0.856);
 }
+
 
 /* Feed */
 
-#root div {
-    width: 100%;
-}
 .nav-bar ul {
     display: flex;
     justify-content: space-evenly;
@@ -339,12 +308,16 @@ span.psw {
     margin: 4px 0 4px 0;
     border-radius:50%;
 }
+.post-area {
+    margin-left: 30%;
+}
 .write-post {
-    width: 500px;
+    width: 73%;
     height: 100px;
 
-    border: none;
+    border: 1px solid lightgray;
     border-radius: 10px;
+    padding: 10px;
     outline: aquamarine;
 }
 .button-feed {
@@ -352,7 +325,7 @@ span.psw {
     width: 80px;
     height: 40px;
 
-    margin-top: 5px;
+    margin: 5px 0 0 10px;
     background-color: rgb(23, 30, 100);;
 
     border-radius: 10px;
@@ -369,30 +342,15 @@ span.psw {
     display: flex;
     border-radius: 10px 10px 0 0;
 }
-.another-user-photo{
-    height: 100px;
-    width: 100px;
 
-    padding: 10px;
-    border-radius: 50%;
-}
-#posts {
-    background-color: white;
-    margin-top: 7px;
-    border-radius: 10px;
-}
-#posts p {
-    padding-left: 20px;
-}
-.friends-post {
-    display: flex;
-    justify-content: space-evenly;
-
-    list-style: none;
-}
 #posts {
     display: block;
+    width: 70%;
+    background-color: white;
+    margin: 5% 0 0 20%;
+    border-radius: 10px;
 }
+
 #posts p {
     padding: 30px;
     font-size: 25px;
@@ -407,12 +365,29 @@ span.psw {
 #posts li {
     width: 50%;
 }
+.each-post {
+    margin-bottom: 5%;
+}
+
+.friends-post {
+    display: flex;
+    justify-content: space-evenly;
+
+    list-style: none;
+}
+
 .react-button {
     width: 100%;
     color: black;
+
+    font-size: 29px;
     background-color: rgb(252, 251, 247);
     border-radius: 10px;
 }
+.liked {
+    background-color: rgb(151, 47, 151);
+}
+
 .delete {
     font-weight: bolder;
     color: crimson;
@@ -438,22 +413,9 @@ span.psw {
         width: 100%; 
         margin-right: 0;
     }
-    #main-page {
+    .main-page {
         width: 100%;
     }
-    .button-confirm {
-        width: 30%;
-        height: 40px;
-    
-        margin-top: 5px;
-        background-color: rgb(235, 173, 5);
-    
-        border-radius: 10px;
-        border: 1px solid rgb(223, 105, 144);
-
-        font-size: 20px;
-    }
-
    /* Feed */
 
    .profile {

@@ -1,10 +1,6 @@
   /* Change styles for span and cancel button on extra small screens */
   @media screen and (max-width: 300px) {
-    span.psw {
-       display: block;
-       float: none;
-    }
-    .cancelbtn {
+    .cancel-btn {
        width: 100%;
     }
   }
@@ -18,7 +14,7 @@
     color: rgb(228, 234, 235);
     font-size: 40px;
 }
-#subtitle-one{
+.subtitle-one{
     font-family: monospace;
     font-size: 20px;
     color: cadetblue;
