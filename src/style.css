@@ -7,7 +7,7 @@ body {
     display: flex;
 }
 .invitation {
-    color: rosybrown;
+    color: rgb(81, 109, 131);
     font-family: 'Lobster Two', cursive;
     font-size: 25px;
 
@@ -165,10 +165,16 @@ img.icone {
     display: block;
     width: 70%;
     height: 30px;
+
+    margin-bottom: 10px;
     border-radius: 10px;
     border: 1px solid lightgray;
     padding-left: 5px;
 }
+.container label {
+    color: gray;
+}
+
 .modal {
     display: none;
     width: 100%;

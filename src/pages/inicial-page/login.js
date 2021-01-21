@@ -38,9 +38,9 @@ document.getElementById('main-page').innerHTML = `
           </div>
 
             <div class="container">
-              <label for="E-mail"><b>E-mail</b></label>
+              <label for="E-mail">E-mail</label>
               <input id="email" type="text" placeholder="Ex.: maeterrinha@gmail.com" name="email" required>
-              <label for="psw"><b>Password</b></label>
+              <label for="psw">Password</label>
               <input id="password" type="password" placeholder="Ex.: 1234" autocomplete="off" name="psw" required>
 
               <button id="feed-in" class="feed-in" type="submit">Login</button>
