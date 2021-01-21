@@ -4,7 +4,6 @@ import { Feed } from './pages/feed/index.js';
 import { Home } from './pages/inicial-page/about.js';
 import { userOn } from './services/index.js';
 
-
   const routeRender = () => {
   const rootDiv = document.getElementById('root');
   const routes = {

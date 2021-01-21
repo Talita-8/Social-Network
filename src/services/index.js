@@ -26,10 +26,6 @@ import { onNavigate } from '../utils/history.js';
         let errorMessage = error.message;
         return {errorCode, errorMessage}
       })
-      if(userLog != null){
-        userLog.updateProfile({displayName: name})
-        console.log('Nome: ', user.displayName)
-      }
     }
 
 export function errorRegister(){
