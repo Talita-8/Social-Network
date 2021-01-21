@@ -4,6 +4,7 @@ Projeto TPM - Tudo é possível para Mulheres que compartilham ideais!
 
 ## Índice
 
+* [Social Network - Sobre](#Sobre)
 * [Organização/Planejamento](#Organização/planejamento)
 * [Definição do produto](#Definição-do-produto)
 * [Pesquisa com usuários](#Pesquisa-com-usuários)
@@ -13,6 +14,40 @@ Projeto TPM - Tudo é possível para Mulheres que compartilham ideais!
 * [Protótipo](#Protótipo)
 * [Equipe Laboratoria](#Equipe-laboratoria)
 * [Agradecimentos](#Agradecimentos)
+
+
+## Sobre
+
+![Captura de tela de 2021-01-21 11-05-43](https://user-images.githubusercontent.com/71895567/105361954-0aabe380-5bd9-11eb-9746-bcdc6467f6dd.png)
+
+Apresentamos com muito orgulho o nosso terceiro projeto realizado na Laboratoria!
+
+O objetivo era desenvolver uma rede social capaz de:
+- [X] Realizar um cadastro;
+- [X] Ter como opções de login uma conta Google ou email e senha;
+- [X] Permitir criação de posts;
+- [X] Permitir interação com os posts (curtir e descurtir);
+- [X] Possibilitar a exclusão de posts;
+- [X] Ser uma SPA (Single Page Application);
+- [X] Usar Firebase como servidor.
+
+
+O tema escolhido por nós foi Sororidade. Nossa rede social tem a intenção de unir mulheres para compartilhar oportunidades de trabalho, cursos e dar força umas as outras em um lugar seguro.
+O nome TPM foi uma brincadeira com o esteriótipo, mas significa "Tudo é possível para Mulheres".
+
+Escolhemos cores leves que transmitem tranquilidade e segurança e ao mesmo tempo não cause desconforto ao usuário, visto que redes sociais são utilizadas por um longo período durante as interações.
+
+![Captura de tela de 2021-01-21 11-31-46](https://user-images.githubusercontent.com/71895567/105365024-98d59900-5bdc-11eb-8f06-b86a234f753c.png)
+
+Durante o processo aprendemos a utilizar o Firebase com suas principais ferramentas: Cloud Firestore e Authentication.
+Este foi responsável por armazenar os emails de usuários e suas respectivas senhas, postagens e interações.
+![cinnamon-20210121-8-min](https://user-images.githubusercontent.com/71895567/105365901-83ad3a00-5bdd-11eb-806c-99bb208c67a2.gif)
+
+Regras que incluímos até o momento:
+
+* Apenas um email poderá ser usado por conta; 
+* A senha não poderá ser inferior a 6 caracteres;
+* Curtir ou amar uma publicação poderá ser feito apenas uma vez por usuário (ao tentar clicar novamente a interação será removida);
 
 
 
