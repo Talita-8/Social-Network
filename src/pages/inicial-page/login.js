@@ -53,7 +53,7 @@ document.getElementById('main-page').innerHTML = `
     </div>
   </section>
   <div class="inicial-page" id="inicial-page">
-    <span id="about-link" class="about-link">Venha fazer parte!<span>
+    <span class="invitation">Venha fazer parte!<span>
   </div>
   `
 funcLogin();

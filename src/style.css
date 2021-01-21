@@ -1,10 +1,12 @@
 body {
     background-color:  rgb(253, 253, 253);
-    display: flex;
+    display: block;
     margin: 0 0 0 10px;
 }
-
-.about-link {
+.flex-container {
+    display: flex;
+}
+.invitation {
     color: rosybrown;
     font-family: 'Lobster Two', cursive;
     font-size: 25px;
@@ -247,24 +249,25 @@ img.icone {
     font-size: 20px;
     color: cadetblue;
 }
+.about-title {
+    font-family: 'Lobster Two', cursive;
+    text-align: center;
+    font-size: 30px;
+    color: cadetblue;
+    cursor: pointer;
+}
+.about-text {
+    display: none; 
+    padding: 10px;
 
-#about-text {
-    position: relative;
-    bottom: 300px;
-    border-radius: 10px;
-
+    font-size: 20px;
+    color: dimgrey;
+    text-align: justify;
     font-family: monospace;
-    padding: 15px;
-    font-size: 15px;
-    color: transparent;
-    transition: 1s;
 }
-
-#about-text:hover {
-    color: rgb(66, 66, 66);
-    background-color: rgba(255, 255, 255, 0.856);
+.about-title:hover .about-text {
+    display: block;
 }
-
 
 /* Feed */
 
@@ -395,4 +398,13 @@ img.icone {
 .comment {
     font-weight: bolder;
     color: crimson;
+}
+footer {
+    height: 50px;
+    padding: 10px;
+    margin-top: 15px;
+
+    background-color: rgb(12, 163, 163);
+    color: white;
+    text-align: end;
 }
