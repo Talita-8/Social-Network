@@ -1,6 +1,4 @@
-Projeto TPM - Tudo é possível para Mulheres que compartilham ideais!
-
-[Link do Projeto](https://social-network-lab-pnd.web.app/)
+# Projeto TPM - Tudo é possível para Mulheres que compartilham ideais!
 
 ## Índice
 
@@ -50,6 +48,7 @@ Regras que incluímos até o momento:
 * Curtir ou amar uma publicação poderá ser feito apenas uma vez por usuário (ao tentar clicar novamente a interação será removida);
 
 
+[Link do Projeto](https://social-network-lab-pnd.web.app/)
 
 ## Organização/Planejamento
 
