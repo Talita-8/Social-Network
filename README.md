@@ -1,4 +1,4 @@
-# Projeto TPM - Tudo é possível para Mulheres que compartilham ideais!
+# Tudo é possível para Mulheres que compartilham ideais!
 
 ## Índice
 
@@ -47,8 +47,6 @@ Regras que incluímos até o momento:
 * A senha não poderá ser inferior a 6 caracteres;
 * Curtir ou amar uma publicação poderá ser feito apenas uma vez por usuário (ao tentar clicar novamente a interação será removida);
 
-
-[Link do Projeto](https://social-network-lab-pnd.web.app/)
 
 ## Organização/Planejamento
 
