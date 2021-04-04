@@ -1,22 +1,29 @@
-// Este é seu ponto de entrada da sua aplicação
-import { onNavigate } from './utils/history.js';
-import { Feed } from './pages/feed/index.js';
-import { Home } from './pages/inicial-page/about.js';
-import { userOn } from './services/index.js';
+import { onNavigate } from "./utils/history.js";
+import { Feed } from "./pages/feed/index.js";
+import { Home } from "./pages/home/home.js";
+import { Login } from "./pages/home/login.js";
+import { Register } from "./pages/home/register.js";
 
-  const routeRender = () => {
-  const rootDiv = document.getElementById('root');
+const routeRender = () => {
+  const rootDiv = document.getElementById("root");
   const routes = {
-    '/' : Home ,
-    '/feed' : Feed
+    "/": Home,
+    "/feed": Feed
   };
-  rootDiv.innerHTML = '';
+  rootDiv.innerHTML = "";
   rootDiv.appendChild(routes[window.location.pathname]());
 };
 
-window.addEventListener('popstate', routeRender);
-window.addEventListener('load', () => {
-    onNavigate('/');
-    userOn();  
-    routeRender();
+window.addEventListener("popstate", routeRender);
+window.addEventListener("load", (event) => {
+  event.preventDefault();
+  onNavigate("/");
+  document
+  .querySelectorAll(".home-buttons")
+  .forEach((button) => {
+    button.addEventListener("click", (event) => {
+      const buttonClicked = event.path[0].innerHTML
+      buttonClicked == "Login" ? Login() : Register()
+    })
+  })
 });
