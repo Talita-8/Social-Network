@@ -3,6 +3,7 @@ import { Feed } from "./pages/feed/index.js";
 import { Home } from "./pages/home/home.js";
 import { Login } from "./pages/home/login.js";
 import { Register } from "./pages/home/register.js";
+const user = firebase.auth().currentUser;
 
 const routeRender = () => {
   const rootDiv = document.getElementById("root");
@@ -17,6 +18,8 @@ const routeRender = () => {
 window.addEventListener("popstate", routeRender);
 window.addEventListener("load", (event) => {
   event.preventDefault();
+  if(!user){
+    
   onNavigate("/");
   document
   .querySelectorAll(".home-buttons")
@@ -26,4 +29,5 @@ window.addEventListener("load", (event) => {
       buttonClicked == "Login" ? Login() : Register()
     })
   })
+}
 });

@@ -1,4 +1,5 @@
 
    
 
-  
+const db = firebase.firestore();
+
