@@ -1,36 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt_BR">
 <head>
   <meta rset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+ <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
+  <title>TPM</title>
   <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="./mobile.css">
-  <link rel="icon" href="./img/hands.png">
-
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Limelight&family=Quicksand&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
 </head>
 
   <body>
-      <div class="flex-container">
-        <div id="main-page" class="main-page"></div>
-        <div class="root" id="root"></div>
-      </div>
+    <header>Tudo é Possível para Mulheres</header>
+     <main class="root" id="root">
+     </main>
     <footer>
       Developed by Lucila Xavier, Mairã Soares and Talita Silva
     </footer>
-
       <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
       <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
-      <script src="/__/firebase/7.23.0/firebase-firestore.js"></script>
-      <script src="/__/firebase/7.23.0/firebase-analytics.js"></script>
-      
-      <script type="module" src="router.js"></script>
-      <script type="module" src="./pages/inicial-page/login.js"></script>
-  </body>
+      <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
 
+      <script src="./services/firebase-config.js"></script>
+      <script type="module" src="router.js"></script>
+  </body>
 </html>
