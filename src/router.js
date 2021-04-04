@@ -19,7 +19,7 @@ window.addEventListener("popstate", routeRender);
 window.addEventListener("load", (event) => {
   event.preventDefault();
   if(!user){
-    
+
   onNavigate("/");
   document
   .querySelectorAll(".home-buttons")
