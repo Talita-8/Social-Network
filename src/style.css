@@ -1,60 +1,121 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 header {
-    background-color: #461e1e;
-    color: #f9f4ed;
-    font-family: 'Lobster Two', cursive;
-    padding: 1.3rem;
-    text-align: center;
-    font-size: 2.5rem;
-    position: fixed;
-    width: 100%;
-    box-shadow: 3px 3px 6px #5f5d5d;
+  background-color: #461e1e;
+  color: #f9f4ed;
+  font-family: "Lobster Two", cursive;
+  padding: 1.3rem;
+  text-align: center;
+  font-size: 2.5rem;
+  position: fixed;
+  width: 100%;
+  box-shadow: 3px 3px 6px #5f5d5d;
 }
 
 .main-container {
-    background: linear-gradient(to right,  #eacfc2,  #f7ebe6);;
-    height: 92vh;
+  background: linear-gradient(to right, #eacfc2, #f7ebe6);
+  height: 92vh;
 }
 
 .main-itens {
-    display: flex;
-    align-items: center;
-    height: 100%;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 .about-text {
-    width: 50%;
+  width: 50%;
 }
-.about-text h1{
-    font-family: 'Lobster Two', cursive;
-    text-align: center;
-    font-size: 3rem;
-    color: #c5961f;
-    margin-bottom: 1.5rem;
-}
-
-.about-text p{
-    text-align: justify;
-    font-size: 1.5rem;
-    font-family: monospace;
-    color: #461e1e;
+.about-text h1 {
+  font-family: "Lobster Two", cursive;
+  text-align: center;
+  font-size: 3rem;
+  color: #c5961f;
+  margin-bottom: 1.5rem;
 }
 
-.home-buttons{
-    background-color: #9a7575;
-    padding: 0.5rem;
-    font-size: 1.5rem;
-    color: antiquewhite;
-    border-radius: 0.5rem;
-    font-weight: bold;
-    margin: 2rem 0.7rem 0 0;
+.about-text p {
+  text-align: justify;
+  font-size: 1.5rem;
+  font-family: monospace;
+  color: #461e1e;
 }
+
+.home-buttons,
+.logout-button {
+  background-color: #9a7575;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  color: antiquewhite;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  margin: 2rem 0.7rem 0 0;
+}
+
+.feed-container {
+  padding-top: 6rem;
+}
+
+.feed-menu ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+.write-post-area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  
+}
+
+.write-post-area textarea {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 0.3rem;
+  border: 1px solid;
+  margin-bottom: 3rem;
+}
+.post-button {
+  background-color: #9a7575;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  color: antiquewhite;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  height: 50%;
+}
+
+.all-posts {
+  width: 70%;
+  padding: 1.5rem;
+  border: 1px solid darkgray;
+  border-radius: 1rem;
+  margin-top: 1rem;
+}
+
+.each-post {
+  padding: 1rem;
+  border: 1px solid darkgoldenrod;
+  font-size: 2rem;
+  text-align: center;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.each-post button {
+  padding: 0.5rem;
+  border-radius: 1rem;
+  background: burlywood;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #540404;
+}
+
 footer {
-    background-color: #461e1e;
-    color: #a04f08;
-    padding: 1rem;
-    font-size: 1.5rem;
-    text-align: end;
+  background-color: #461e1e;
+  color: #a04f08;
+  padding: 1rem;
+  font-size: 1.5rem;
+  text-align: end;
 }
