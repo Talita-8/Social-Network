@@ -11,7 +11,7 @@ export const homeFunctions = () => {
       document
         .querySelector(".return-button")
         .addEventListener("click", () => {
-          About();
+          window.location.reload()
         });
     });
   });

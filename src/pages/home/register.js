@@ -3,9 +3,9 @@ export const Register = () => {
   container.innerHTML = `
     <div class="login-area">
     <form>
-      <input type="text" placeholder="Digite seu email">
-      <input type="password" placeholder="Digite sua senha">
-      <input type="submit" value="Cadastrar">
+      <input type="text" placeholder="Escolha um email">
+      <input type="password" autocomplete="off" placeholder="Crie uma senha">
+      <input class="home-buttons" type="submit" value="Cadastrar">
     </form>
     <button class="return-button" title="Voltar">◄</button>
   </div>
