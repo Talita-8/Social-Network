@@ -47,6 +47,14 @@ header {
   flex-flow: column;
   align-items: center;
 }
+
+.login-area input {
+  width: 20rem;
+  height: 2.5rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
 .home-buttons,
 .logout-button,
 .return-button {
