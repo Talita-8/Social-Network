@@ -69,6 +69,7 @@ header {
 
 .feed-container {
   padding-top: 6rem;
+  background-color: #f5e6cb2e;
 }
 
 .feed-menu ul {
@@ -97,7 +98,7 @@ header {
   color: antiquewhite;
   border-radius: 0.5rem;
   font-weight: bold;
-  height: 50%;
+  height: 30%;
 }
 
 .all-posts {
@@ -106,6 +107,7 @@ header {
   border: 1px solid darkgray;
   border-radius: 1rem;
   margin-top: 1rem;
+  background-color: white;
 }
 
 .each-post {
@@ -115,6 +117,7 @@ header {
   text-align: center;
   border-radius: 1rem;
   margin-bottom: 1rem;
+  background-color: white;
 }
 
 .each-post button {

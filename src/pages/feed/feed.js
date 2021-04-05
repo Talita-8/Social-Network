@@ -1,7 +1,6 @@
 import { getAllPosts, createPost } from "../../services/index.js";
 
 export const feedFunctions = () => {
- //const id = firebase.auth().currentUser.uid
  let postContainer = document.querySelector(".all-posts")
 
   const showPosts = (post,id) => {
@@ -19,10 +18,11 @@ export const feedFunctions = () => {
     });
   });
 
-//   document.querySelector(".post-button")
-//   .addEventListener("click", () => {
-//     const post = document.querySelector(".post-input").value
-//     createPost(post,id);
-//   });
+  document.querySelector(".post-button")
+  .addEventListener("click", (e) => {
+    e.preventDefault();
+    const post = document.querySelector(".post-input").value
+    createPost(post);
+  });
 
 };
