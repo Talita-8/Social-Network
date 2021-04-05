@@ -42,8 +42,14 @@ header {
   color: #461e1e;
 }
 
+.login-area form {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
 .home-buttons,
-.logout-button {
+.logout-button,
+.return-button {
   background-color: #9a7575;
   padding: 0.5rem;
   font-size: 1.5rem;
@@ -66,7 +72,7 @@ header {
 .write-post-area {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;  
+  justify-content: center;
 }
 
 .write-post-area textarea {
