@@ -25,4 +25,4 @@ window.addEventListener("load", (event) => {
     onNavigate("/feed")
     feedFunctions();
   }
-});
+}); 
