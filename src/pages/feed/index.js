@@ -10,7 +10,7 @@ export const Feed = () => {
    </section>
    <div class="write-post-area">
     <textarea
-    cols="50" rows="5" placeholder="Poste uma ideia, uma dica ou uma oportunidade para mulheres."></textarea>
+    cols="50" rows="5" class="post-input" placeholder="Poste uma ideia, uma dica ou uma oportunidade para mulheres."></textarea>
     <button class="post-button">Postar</button>
    <article class="all-posts"></article>
    </div>
