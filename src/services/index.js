@@ -13,15 +13,16 @@ export const signOut = () => {
   return firebase.auth().signOut();
 };
 
-export const createPost = (postText, id) => {
-    const date = new Date();
+export const createPost = (postText) => {
+  const id = firebase.auth().currentUser.uid
+  const date = new Date();
     db.collection("Posts")
-      .get({
-        id_user: `${id}`,
+      .add({
+        id_user: id,
         date: date.toLocaleString(),
         time: date.getTime(),
-        likes: [],
-        loveIt: [],
+        likes: [id],
+        loveIt: [id],
         post_text: `${postText}`
       })
       .then(() => {

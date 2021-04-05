@@ -9,9 +9,11 @@ export const Feed = () => {
     </ul>
    </section>
    <div class="write-post-area">
+   <form class="write-post-area">
     <textarea
     cols="50" rows="5" class="post-input" placeholder="Poste uma ideia, uma dica ou uma oportunidade para mulheres."></textarea>
-    <button class="post-button">Postar</button>
+    <input type="submit" class="post-button" value="Postar">
+   </form>
    <article class="all-posts"></article>
    </div>
     `
