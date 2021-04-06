@@ -15,29 +15,27 @@ export const Register = () => {
   </div>
     `;
 
-    document
-    .querySelector(".home-buttons")
-    .addEventListener("click", (e) => {
-      e.preventDefault();
-      const email = document.querySelector(".email-input").value
-      const password = document.querySelector(".password-input").value
+  document.querySelector(".home-buttons").addEventListener("click", (e) => {
+    e.preventDefault();
+    const email = document.querySelector(".email-input").value;
+    const password = document.querySelector(".password-input").value;
 
-      signUp(email, password)
+    signUp(email, password)
       .then((userCredential) => {
-        console.log(userCredential.user)
+        console.log(userCredential.user);
       })
       .catch((error) => {
-        const alertArea = document.querySelector(".alert")
-    
-        if(error.code === "auth/weak-password"){
-          alertArea.innerHTML = "Senha muito fraca"
+        const alertArea = document.querySelector("#alert");
+
+        if (error.code === "auth/weak-password") {
+          alertArea.innerHTML = "Senha muito fraca";
         }
-        if(error.code === "auth/email-already-in-use") {
-          alertArea.innerHTML = "Email já cadastrado"
+        if (error.code === "auth/email-already-in-use") {
+          alertArea.innerHTML = "Email já cadastrado";
         }
-        if(error.code === "auth/invalid-email"){
-          alertArea.innerHTML = "Email inválido"
+        if (error.code === "auth/invalid-email") {
+          alertArea.innerHTML = "Email inválido";
         }
-      })
-    })
+      });
+  });
 };

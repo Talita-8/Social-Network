@@ -25,7 +25,7 @@ export const createPost = (postText) => {
         post_text: `${postText}`
       })
       .then(() => {
-        alert("Mensagem postada!");
+        window.location.reload()
       })
       .catch((error) => {
         alert(
