@@ -57,6 +57,6 @@ export const createPost = (postText) => {
     .update({
       loveIt: firebase.firestore.FieldValue.arrayUnion(userId),
     })
-    .then(() => console.log("You liked it"))
+    .then(() => console.log("You loved it"))
     .catch((error) => console.log(error))
   };
