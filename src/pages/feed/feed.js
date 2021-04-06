@@ -1,4 +1,4 @@
-import { getAllPosts, createPost } from "../../services/index.js";
+import { getAllPosts, createPost, signOut } from "../../services/index.js";
 
 export const feedFunctions = () => {
  let postContainer = document.querySelector(".all-posts")
@@ -25,4 +25,8 @@ export const feedFunctions = () => {
     createPost(post);
   });
 
+  document.querySelector(".logout-button")
+  .addEventListener("click", () => {
+    signOut();
+  })
 };
