@@ -25,7 +25,7 @@ export const createPost = (postText) => {
         post_text: `${postText}`
       })
       .then(() => {
-        window.location.reload()
+        window.location.reload();
       })
       .catch((error) => {
         alert(
@@ -59,4 +59,15 @@ export const createPost = (postText) => {
     })
     .then(() => console.log("You loved it"))
     .catch((error) => console.log(error))
+  };
+
+  export const deletePost = (postId) => {
+    db.collection('Posts').doc(postId)
+      .delete()
+      .then(() => {
+        window.location.reload();
+      })
+      .catch((error) => {
+        alert("Houve algum problema, recarregue a página e tente novamente.", error);
+      });
   };
