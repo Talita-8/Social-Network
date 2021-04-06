@@ -57,6 +57,8 @@ header {
   height: 2.5rem;
   border-radius: 1rem;
   margin-bottom: 1rem;
+  font-size: 1.4rem;
+  text-align: center;
 }
 
 .home-buttons,

@@ -25,6 +25,6 @@ export const Login = () => {
       .then((userCredential) => {
         console.log(userCredential.user)
       })
-      .catch((error) => console.log(error))
+      .catch((err) => console.error(err.code, err.message));
     });
 };

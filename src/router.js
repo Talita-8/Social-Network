@@ -1,9 +1,7 @@
 import { onNavigate } from "./utils/history.js";
 import { Feed } from "./pages/feed/index.js";
-import { Home } from "./pages/home/home.js";
-import { homeFunctions } from "./pages/home/home-routes.js";
+import { Home, homeFunctions } from "./pages/home/home.js";
 import { feedFunctions } from "./pages/feed/feed.js";
-
 
 const routeRender = () => {
   const rootDiv = document.getElementById("root");
