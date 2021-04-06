@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
 }
+
+body {
+  background: linear-gradient(to right, #eacfc2, #f7ebe6);
+}
 header {
   background-color: #461e1e;
   color: #f9f4ed;
@@ -61,7 +65,7 @@ header {
   background-color: #9a7575;
   padding: 0.5rem;
   font-size: 1.5rem;
-  color: antiquewhite;
+  color: rgb(248, 242, 234);
   border-radius: 0.5rem;
   font-weight: bold;
   margin: 2rem 0.7rem 0 0;
@@ -69,7 +73,8 @@ header {
 
 .feed-container {
   padding-top: 6rem;
-  background-color: #f5e6cb2e;
+  background-color: #f9f2e6;
+  min-height: 92vh;
 }
 
 .feed-menu ul {
@@ -95,7 +100,7 @@ header {
   background-color: #9a7575;
   padding: 0.5rem;
   font-size: 1.5rem;
-  color: antiquewhite;
+  color: rgb(248, 242, 234);
   border-radius: 0.5rem;
   font-weight: bold;
   height: 30%;
@@ -118,6 +123,15 @@ header {
   border-radius: 1rem;
   margin-bottom: 1rem;
   background-color: white;
+}
+
+.post-text {
+  padding-bottom: 1.3rem;
+}
+
+.post-date {
+  padding-bottom: 1rem;
+  color: #d8a462;
 }
 
 .each-post button {

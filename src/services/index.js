@@ -20,9 +20,8 @@ export const createPost = (postText) => {
       .add({
         id_user: id,
         date: date.toLocaleString(),
-        time: date.getTime(),
-        likes: [id],
-        loveIt: [id],
+        likes: [],
+        loveIt: [],
         post_text: `${postText}`
       })
       .then(() => {
@@ -40,4 +39,24 @@ export const createPost = (postText) => {
     return db.collection("Posts")
     .orderBy("date", "desc")
     .get();
+  };
+
+  export const likePost = (postId) => {
+    const userId = firebase.auth().currentUser.uid
+    db.collection("Posts").doc(postId)
+    .update({
+      likes: firebase.firestore.FieldValue.arrayUnion(userId),
+    })
+    .then(() => console.log("You liked it"))
+    .catch((error) => console.log(error))
+  };
+
+  export const lovePost = (postId) => {
+    const userId = firebase.auth().currentUser.uid
+    db.collection("Posts").doc(postId)
+    .update({
+      loveIt: firebase.firestore.FieldValue.arrayUnion(userId),
+    })
+    .then(() => console.log("You liked it"))
+    .catch((error) => console.log(error))
   };
