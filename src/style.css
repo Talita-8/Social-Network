@@ -145,6 +145,10 @@ header {
   color: #540404;
 }
 
+.alert {
+  color: rgb(255, 0, 85);
+}
+
 footer {
   background-color: #461e1e;
   color: #a04f08;
