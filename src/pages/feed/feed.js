@@ -3,7 +3,7 @@ import {
   createPost,
   signOut,
   likePost,
-  lovePost
+  lovePost,
 } from "../../services/index.js";
 
 export const feedFunctions = () => {
@@ -11,46 +11,63 @@ export const feedFunctions = () => {
 
   const showPosts = (post, id) => {
     postContainer.innerHTML += `
-      <div class="each-post" data-id="${id}">
+      <div data-id="${id}" class="each-post">
          <p class="post-text">${post.post_text}</p>
          <p class="post-date">${post.date}</p>
-         <button title="Curti" class="like-button">Like ${post.likes.length}</button>
-         <button title="Amei" class="love-button">Love ${post.loveIt.length}</button>
+         <button id="like-${id}" "title="Curti" class="like-button">Like ${post.likes.length}</button>
+         <button id="love-${id}" "title="Amei" class="love-button">Love ${post.loveIt.length}</button>
       </div>    
     `;
   };
+
+  const likeUpdate = (postId) => {
+    const docRef = firebase.firestore().doc(`Posts/${postId}`);
+    const likeButton = document.querySelector(`#like-${postId}`);
+    docRef.onSnapshot((doc) => {
+      const posts = doc.data();
+      likeButton.innerHTML = `Like ${posts.likes.length}`;
+    });
+  };
+
+  const loveUpdate = (postId) => {
+    const docRef = firebase.firestore().doc(`Posts/${postId}`);
+    const loveButton = document.querySelector(`#love-${postId}`);
+    docRef.onSnapshot((doc) => {
+      const posts = doc.data();
+      loveButton.innerHTML = `Like ${posts.loveIt.length}`;
+    });
+  };
+ 
   getAllPosts()
-    .then((snapshot) => {
-      snapshot.forEach((posts) => {
+    .then((data) => {
+      data.forEach((posts) => {
         showPosts(posts.data(), posts.id);
       });
     })
     .then(() => {
-      document.querySelectorAll(".like-button")
-      .forEach((button) => {
+      document.querySelectorAll(".like-button").forEach((button) => {
         button.addEventListener("click", (e) => {
           const idPost = e.path[0].parentNode.dataset.id;
           likePost(idPost);
+          likeUpdate(idPost);
         });
       });
-      document.querySelectorAll(".love-button")
-      .forEach((button) => {
+      document.querySelectorAll(".love-button").forEach((button) => {
         button.addEventListener("click", (e) => {
           const idPost = e.path[0].parentNode.dataset.id;
           lovePost(idPost);
+          loveUpdate(idPost);
         });
       });
     });
 
-  document.querySelector(".post-button")
-  .addEventListener("click", (e) => {
+  document.querySelector(".post-button").addEventListener("click", (e) => {
     e.preventDefault();
     const post = document.querySelector(".post-input").value;
-    createPost(post);
+    createPost(post)
   });
 
-  document.querySelector(".logout-button")
-  .addEventListener("click", () => {
+  document.querySelector(".logout-button").addEventListener("click", () => {
     signOut();
   });
 };
