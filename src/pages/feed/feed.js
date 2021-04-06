@@ -9,15 +9,28 @@ import {
 export const feedFunctions = () => {
   let postContainer = document.querySelector(".all-posts");
 
-  const showPosts = (post, id) => {
+  const showPosts = (post) => {
+  const uid = firebase.auth().currentUser.uid
+
+  if(uid === post.id_user){
     postContainer.innerHTML += `
-      <div data-id="${id}" class="each-post">
+      <div data-id="${post.id}" class="each-post">
          <p class="post-text">${post.post_text}</p>
          <p class="post-date">${post.date}</p>
-         <button id="like-${id}" "title="Curti" class="like-button">Like ${post.likes.length}</button>
-         <button id="love-${id}" "title="Amei" class="love-button">Love ${post.loveIt.length}</button>
+         <button id="like-${post.id}" "title="Curti" class="like-button">Like ${post.likes.length}</button>
+         <button id="love-${post.id}" "title="Amei" class="love-button">Love ${post.loveIt.length}</button>
+         <button id="delete=${post.id}" title="Excluir" class="delete-button"> X </button>
       </div>    
-    `;
+    `} else {
+      postContainer.innerHTML += `
+      <div data-id="${post.id}" class="each-post">
+         <p class="post-text">${post.post_text}</p>
+         <p class="post-date">${post.date}</p>
+         <button id="like-${post.id}" "title="Curti" class="like-button">Like ${post.likes.length}</button>
+         <button id="love-${post.id}" "title="Amei" class="love-button">Love ${post.loveIt.length}</button>
+      </div>    
+    `
+    }
   };
 
   const likeUpdate = (postId) => {
@@ -41,7 +54,7 @@ export const feedFunctions = () => {
   getAllPosts()
     .then((data) => {
       data.forEach((posts) => {
-        showPosts(posts.data(), posts.id);
+        showPosts(posts.data());
       });
     })
     .then(() => {

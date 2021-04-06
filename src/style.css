@@ -59,6 +59,7 @@ header {
   margin-bottom: 1rem;
   font-size: 1.4rem;
   text-align: center;
+  padding: 0.1rem;
 }
 
 .home-buttons,
@@ -136,7 +137,8 @@ header {
   color: #d8a462;
 }
 
-.each-post button {
+.like-button,
+.love-button {
   padding: 0.5rem;
   border-radius: 1rem;
   background: burlywood;
@@ -145,8 +147,19 @@ header {
   color: #540404;
 }
 
-.alert {
-  color: rgb(255, 0, 85);
+.delete-button {
+  padding: 0.5rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  font-weight: bolder;
+  color: #a90000;
+  background-color: white;
+}
+
+#alert {
+  color: rgb(197, 4, 69);
+  font-family: monospace;
 }
 
 footer {
