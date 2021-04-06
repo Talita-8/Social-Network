@@ -8,6 +8,7 @@ export const Register = () => {
     <form>
       <input class="email-input" type="text" placeholder="Escolha um email">
       <input class="password-input" type="password" autocomplete="off" placeholder="Crie uma senha">
+      <p class="alert"><p>
       <input class="home-buttons" type="submit" value="Cadastrar">
     </form>
     <button class="return-button" title="Voltar">◄</button>
@@ -25,6 +26,18 @@ export const Register = () => {
       .then((userCredential) => {
         console.log(userCredential.user)
       })
-      .catch((error) => console.log(error))
+      .catch((error) => {
+        const alertArea = document.querySelector(".alert")
+    
+        if(error.code === "auth/weak-password"){
+          alertArea.innerHTML = "Senha muito fraca"
+        }
+        if(error.code === "auth/email-already-in-use") {
+          alertArea.innerHTML = "Email já cadastrado"
+        }
+        if(error.code === "auth/invalid-email"){
+          alertArea.innerHTML = "Email inválido"
+        }
+      })
     })
 };
