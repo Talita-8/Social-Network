@@ -62,6 +62,12 @@ header {
   padding: 0.1rem;
 }
 
+.home-buttons-container {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
 .home-buttons,
 .logout-button,
 .return-button {
@@ -72,6 +78,18 @@ header {
   border-radius: 0.5rem;
   font-weight: bold;
   margin: 2rem 0.7rem 0 0;
+}
+
+.google-login {
+  border-radius: 5px;
+  background-color: white;
+  padding: 0.7rem;
+  font-size: 1.3rem;
+  margin: 2rem 0.7rem 0 0;
+  border: 1px solid #b5850c;
+}
+.google-login span {
+  font-weight: bolder;
 }
 
 .feed-container {

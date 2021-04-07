@@ -1,4 +1,4 @@
-import { signUp } from "../../services/index.js";
+import { fb } from "../../services/index.js";
 let user = firebase.auth().currentUser;
 
 export const Register = () => {
@@ -20,7 +20,7 @@ export const Register = () => {
     const email = document.querySelector(".email-input").value;
     const password = document.querySelector(".password-input").value;
 
-    signUp(email, password)
+    fb.signUp(email, password)
       .then((userCredential) => {
         console.log(userCredential.user);
       })
