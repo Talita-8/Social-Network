@@ -1,11 +1,4 @@
-import {
-  getAllPosts,
-  createPost,
-  signOut,
-  likePost,
-  lovePost,
-  deletePost,
-} from "../../services/index.js";
+import { fb } from "../../services/index.js";
 
 export const feedFunctions = () => {
   let postContainer = document.querySelector(".all-posts");
@@ -53,7 +46,7 @@ export const feedFunctions = () => {
     });
   };
 
-  getAllPosts()
+  fb.getAllPosts()
     .then((data) => {
       data.forEach((posts) => {
         showPosts(posts.data(), posts.id);
@@ -63,14 +56,14 @@ export const feedFunctions = () => {
       document.querySelectorAll(".like-button").forEach((button) => {
         button.addEventListener("click", (e) => {
           const idPost = e.path[0].parentNode.dataset.id;
-          likePost(idPost);
+          fb.likePost(idPost);
           likeUpdate(idPost);
         });
       });
       document.querySelectorAll(".love-button").forEach((button) => {
         button.addEventListener("click", (e) => {
           const idPost = e.path[0].parentNode.dataset.id;
-          lovePost(idPost);
+          fb.lovePost(idPost);
           loveUpdate(idPost);
         });
       });
@@ -78,7 +71,7 @@ export const feedFunctions = () => {
         button.addEventListener("click", (e) => {
           const idPost = e.path[0].parentNode.dataset.id;
           confirm("Tem certeza que deseja excluir essa postagem?");
-          deletePost(idPost);
+          fb.deletePost(idPost);
         });
       });
     });
@@ -86,10 +79,10 @@ export const feedFunctions = () => {
   document.querySelector(".post-button").addEventListener("click", (e) => {
     e.preventDefault();
     const post = document.querySelector(".post-input").value;
-    createPost(post);
+    fb.createPost(post);
   });
 
   document.querySelector(".logout-button").addEventListener("click", () => {
-    signOut();
+    fb.signOut();
   });
 };

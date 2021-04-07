@@ -1,6 +1,6 @@
-import { About } from "./about.js";
 import { Login } from "./login.js";
 import { Register } from "./register.js";
+import { fb } from "../../services/index.js";
 
 export const Home = () => {
   const rootElement = document.createElement("div");
@@ -19,8 +19,11 @@ export const Home = () => {
             para compartilhar planos, sonhos, desafios, oportunidades e encontrar
             apoio e fortalecimento. Há potência em mulheres construtoras de igualdade.
          </p>
-         <button class="home-buttons login">Login</button>
-         <button class="home-buttons subscribe">Inscreva-se</button>
+          <ul class="home-buttons-container">
+            <li><button class="home-buttons login">Login</button></li>
+            <li><button class="home-buttons subscribe">Inscreva-se</button></li>
+            <li><button class="google-login">Login com o <span>Google<span></button></li>
+          </ul>
         <div>
     </div>
     `;
@@ -28,16 +31,18 @@ export const Home = () => {
 };
 
 export const homeFunctions = () => {
-  About();
   document.querySelectorAll(".home-buttons").forEach((button) => {
     button.addEventListener("click", (event) => {
       const buttonClicked = event.path[0].innerHTML;
       buttonClicked == "Login" ? Login() : Register();
-      document
-        .querySelector(".return-button")
-        .addEventListener("click", () => {
-          window.location.reload()
-        });
+      document.querySelector(".return-button").addEventListener("click", () => {
+        window.location.reload();
+      });
     });
   });
+
+  document.querySelector(".google-login")
+  .addEventListener("click", () => {
+    fb.signUpGoogle();
+  })
 };
