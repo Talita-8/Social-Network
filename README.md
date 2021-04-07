@@ -16,8 +16,7 @@ Acesse a rede clicando aqui https://social-network-lab-pnd.web.app/
 
 
 ## Sobre
-
-![Captura de tela de 2021-01-21 11-05-43](https://user-images.githubusercontent.com/71895567/105361954-0aabe380-5bd9-11eb-9746-bcdc6467f6dd.png)
+![ezgif com-video-to-gif (2)](https://user-images.githubusercontent.com/71895567/113799629-d18d0500-972b-11eb-8e9f-150558658a37.gif)
 
 Apresentamos com muito orgulho o nosso terceiro projeto realizado na Laboratoria!
 
@@ -36,11 +35,10 @@ O nome TPM foi uma brincadeira com o esteriótipo, mas significa "Tudo é possí
 
 Escolhemos cores leves que transmitem tranquilidade e segurança e ao mesmo tempo não cause desconforto ao usuário, visto que redes sociais são utilizadas por um longo período durante as interações.
 
-![Captura de tela de 2021-01-21 11-31-46](https://user-images.githubusercontent.com/71895567/105365024-98d59900-5bdc-11eb-8f06-b86a234f753c.png)
+![redesocial](https://user-images.githubusercontent.com/71895567/113800072-aa830300-972c-11eb-8f45-533ee3c68ec4.png)
 
 Durante o processo aprendemos a utilizar o Firebase com suas principais ferramentas: Cloud Firestore e Authentication.
 Este foi responsável por armazenar os emails de usuários e suas respectivas senhas, postagens e interações.
-![cinnamon-20210121-8-min](https://user-images.githubusercontent.com/71895567/105365901-83ad3a00-5bdd-11eb-806c-99bb208c67a2.gif)
 
 Regras que incluímos até o momento:
 
@@ -88,14 +86,6 @@ Há potência em mulheres construtoras de igualdade.
 9. Eu como usuária gostaria de visualizar a quantidade de likes e ameis dos posts publicados.
 10. Eu como usuária gostaria de excluir likes e ameis dos posts publicados.
 11. Eu como usuária gostaria de editar e eliminar publicações.
-
-## Personas
-
-**Ana**
-![Persona 1](src/img/PersonaAna.jpeg)
-
-**Maria**
-![Persona 2](src/img/PersonaMaria.jpeg)
 
 
 ## Definição de pronto
