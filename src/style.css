@@ -156,7 +156,8 @@ header {
 }
 
 .like-button,
-.love-button {
+.love-button,
+.comment-button {
   padding: 0.5rem;
   border-radius: 1rem;
   background: burlywood;
