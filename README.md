@@ -94,11 +94,6 @@ Há potência em mulheres construtoras de igualdade.
 * Diversas usuárias testaram a aplicação.
 * O código sempre está devidamente atualizado com o repositório remoto.
 
-## Protótipo
-
-O protótipo é de baixa fidelidade sofreu algumas alterações conforme os testes com as usuárias e dos conhecimentos técnicos adquiridos pela equipe.
-
-![Protótipo da aplicação](src/img/protreadme.jpg)
 
 ###  Equipe Laboratoria
 
